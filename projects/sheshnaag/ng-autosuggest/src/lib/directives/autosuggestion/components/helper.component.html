@@ -1,0 +1,17 @@
+<div
+  class="autoSuggestions-menu"
+  id="autosuggest-scroller"
+  [ngStyle]="{
+    width: stylings.width,
+    left: stylings.left,
+    right: 'auto',
+    top: stylings.top,
+    bottom: 'auto'
+  }"
+>
+  <ng-container *ngFor="let content of newContentPlaceHolders">
+    <button class="dropdown-item" (click)="insertValue($event)" [title]="content">
+      {{ content }}
+    </button>
+  </ng-container>
+</div>
